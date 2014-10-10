@@ -1,0 +1,242 @@
+Sample Usage:
+
+The following is executed in tux187:
+> lim_2
+￼===========================================================
+| Distributed AubieBook System! | 
+===========================================================
+
+Please enter user name: Bill
+
+=========================================================== 
+| Welcome to Distributed AubieBook System, Bill! | 
+===========================================================
+
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: p
+Enter message: Hello there, everyone! Welcome to our new chat group.
+Feel free to post messages any time. 
+$
+
+=========================================================== 
+| New message added | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: t
+Enter message: Amazing AubieBook! Let’s get this out quick.
+$
+
+=========================================================== 
+| New message tweeted | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: p
+Enter message: Taking a slow cruise to the Bahamas, y’ll! Will be back to civilization in 7 days.
+Keep you posted soon.
+$
+
+=========================================================== 
+| New message added | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: q
+
+=========================================================== 
+| Thank you for using the AubieBook System |
+===========================================================
+
+
+
+
+
+
+
+The following is executed in tux192: > lim_2
+=========================================================== 
+| Distributed AubieBook System! | 
+===========================================================
+
+Please enter user name: Tom
+=========================================================== 
+| Welcome to Distributed AubieBook System, Tom! |
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: f
+Please enter friend’s name: Bill
+
+=========================================================== 
+| Added Bill to Friend’s List |
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: p
+Enter message: Welcome to my new msg page!
+I’m new to this, so be gentle, no flame please. 
+$
+
+=========================================================== 
+| New message added | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: t
+Enter message: Let me be your friend. It’s fun.
+$
+
+=========================================================== 
+| New message tweeted | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: p
+Enter message: Hiking the Rockies in 5 days! Can’t wait to head for the mountains.
+$
+
+=========================================================== 
+| New message added 
+| ===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: w
+
+=========================================================== 
+| Tom’s Wall Page | 
+===========================================================
+Hiking the Rockies in 5 days!
+Can’t wait to head for the mountains.
+Let me be your friend.
+It’s fun.
+Welcome to my new msg page!
+I’m new to this, so be gentle, no flame please.
+
+=========================================================== 
+| End of Tom’s Wall Page | 
+===========================================================
+
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: q
+
+=========================================================== 
+| Thank you for using the AubieBook System |
+===========================================================
+
+
+
+
+
+
+The following is executed in tux189: > lim_2
+=========================================================== 
+| Distributed AubieBook System! | 
+===========================================================
+
+Please enter user name: Jane
+
+=========================================================== 
+| Welcome to Distributed AubieBook System, Jane! | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: f
+Please enter friend’s name: Tom
+
+=========================================================== 
+| Added Tom to Friend’s List | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: p
+Enter message: Summer is cool.
+
+Still trying to adjust to the semester drill. 
+$
+
+=========================================================== 
+| New message added | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: t
+Enter message: Great stuff. You need to try this.
+$
+
+=========================================================== 
+| New message tweeted | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: p
+Enter message: We had a great time at the beach! Not the mention scuba diving and sailing.
+$
+
+=========================================================== 
+| New message added | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: h
+
+=========================================================== 
+| Jane’s Home Page | 
+===========================================================
+Jane ~ We had a great time at the beach! Not the mention scuba diving and sailing.
+Jane ~ Great stuff.
+You need to try this.
+Jane ~ Summer was cool.
+Still trying to adjust to the semester drill.
+
+More message? (yes/no): yes 
+Tom ~ Hiking the Rockies in 5 days!
+Can’t wait to head for the mountains.
+Tom ~ Let me be your friend.
+It’s fun.
+Tom ~ Welcome to my new msg page!
+I’m new to this, so be gentle, no flame please.
+Bill ~ Amazing AubieBook!
+Let’s get this out quick.
+=========================================================== 
+| End of Jane’s Home Page | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: q
+=========================================================== 
+| Thank you for using the AubieBook System | 
+===========================================================
+
+
+
+
+
+
+The following is executed in tux194: > lim_2
+=========================================================== 
+| Distributed AubieBook System! | 
+===========================================================
+
+Please enter user name: Bill
+
+=========================================================== 
+| Welcome to Distributed AubieBook System, Bill! | 
+===========================================================
+
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: f
+Please enter friend’s name: Jane
+
+=========================================================== 
+| Added Jane to Friend’s List | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: p
+Enter message: I’m back to the daily grind. What’s new here?
+$
+
+=========================================================== 
+| New message added | 
+===========================================================
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: h
+All messages (a), Latest messages (l), Enter option: l
+
+=========================================================== 
+| Bill’s Home Page | 
+===========================================================
+Bill ~ I’m back to the daily grind.
+What’s new here?
+Jane ~ We had a great time at the beach! Not the mention scuba diving and sailing.
+Jane ~ Great stuff.
+You need to try this.
+
+More message? (yes/no): yes Still trying to adjust to the semester drill.
+Tom ~ Let me be your friend.
+It’s fun.
+Bill ~ Taking a slow cruise to the Bahamas, y’ll! Will be back to civilization in 7 days.
+Keep you posted soon.
+Bill ~ Amazing AubieBook!
+Let’s get this out quick.
+Jane ~ Summer was cool.
+
+Bill ~ Hello there, everyone!
+Welcome to our new chat group.
+Feel free to post messages any time.
+=========================================================== 
+| End of Bill’s Home Page | 
+===========================================================
+
+Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: q
+
+=========================================================== 
+| Thank you for using the AubieBook System | 
+===========================================================
