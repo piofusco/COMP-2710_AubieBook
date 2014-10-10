@@ -32,7 +32,7 @@ Enter message: Taking a slow cruise to the Bahamas, y’ll! Will be back to civi
 Keep you posted soon.
 $
 
-=========================================================== 
+========================================================== 
 | New message added | 
 ===========================================================
 Add Friend (f), Post (p), Tweet(t), Wall (w), Home (h), Quit (q) Enter option: q
