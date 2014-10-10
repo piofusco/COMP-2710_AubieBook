@@ -4,9 +4,13 @@ Command-line Facebook clone in C++.
 ===================
 
 Goals:
+
 • To perform Object-Oriented Analysis, Design, and Testing
+
 • To develop a non-trivial application using classes and constructors
+
 • To learn distributed communication methods and develop a simple but useful distributed AubieBook system
+
 • To learn to use file I/O and take advantage of the Network File System (NFS)
 
 The proliferation of Internet applications in smartphones, laptops, ipads, and desktops shows the importance of communications among computing devices. One of the key functionalities is the ability to send and receive messages from one computer to another over the network. It is interesting to learn how a simple messaging system can provide this functionality. In this Lab 2, you will analyze, design, implement and test a simple distributed AubieBook system. It will have a simple text-based user interface that allows multiple users to send and receive messages to each other. In this lab project all the users must be implemented in distributed address space, i.e. each user must execute on a different computer and message of one user can be read by another through shared common files. The common files are shared through the Network File Server (NFS).
