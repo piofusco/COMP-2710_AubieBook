@@ -1,6 +1,6 @@
 COMP-2710_AubieBook
 
-C++ Terminal Facebook clone.
+Command-line Facebook clone in C++.
 ===================
 
 Goals:
