@@ -1,0 +1,1092 @@
+Michael Pace
+COMP 2710
+
+Test Results
+
+**********************************************************************************
+************************************LOGGING IN************************************
+**********************************************************************************
+
+**********************************************************************************
+Test Case #1: Entering registered username:
+**********************************************************************************
+
+	===========================================================
+	|               Distributed System AubieBook!             |
+	===========================================================
+
+Printing valid users..
+John
+Enter name: John
+Returning user..
+	===========================================================
+	      Welcome to Distributed System Aubiebook, John!
+	===========================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: 
+
+****************************************************************************************
+Test Case #2: Entering unregistered username:
+****************************************************************************************
+
+	===========================================================
+	|               Distributed System AubieBook!             |
+	===========================================================
+
+Printing valid users..
+Enter name: John
+New user..
+John has been added!
+	===========================================================
+	      Welcome to Distributed System Aubiebook, John!
+	===========================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option:
+
+****************************************************************************************
+***********************************ADDING FRIENDS***************************************
+****************************************************************************************
+
+****************************************************************************************
+Test Case #3: Entering an unregistered username:
+****************************************************************************************
+
+	===========================================================
+	      Welcome to Distributed System Aubiebook, John!
+	===========================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: f
+
+John's friends...
+	
+	
+Please enter user name: Mac
+	
+Not a valid user. Please try again.
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: 
+
+****************************************************************************************
+Test Case #4: Entering the current user:
+****************************************************************************************
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: f
+
+John's friends...
+	
+	
+Please enter user name: John
+	
+Sadly, you can't add yourself as your own friend. Get a life.
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: 
+
+****************************************************************************************
+************************************POSTING/TWEETING************************************
+****************************************************************************************
+
+****************************************************************************************
+Test Case #5: Entering a message/tweet without including a new line with a '$'
+****************************************************************************************
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: p
+	Enter message: Is anyone out there?
+
+
+
+
+$
+
+	======================================================
+	                   New message added                  
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter message: Is anyone out there?
+
+
+
+
+$
+
+	======================================================
+	                 New message tweeted                  
+	======================================================
+
+****************************************************************************************
+Test Case #6: Entering a message/tweet including enter and $ at the end
+****************************************************************************************
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: p
+	Enter message: Hello!
+$
+
+	======================================================
+	                   New message added                  
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter message: Hello2!
+$
+
+	======================================================
+	                 New message tweeted                  
+	======================================================
+
+****************************************************************************************
+Test Case #7: Entering a message/tweet with $ but not after a new line
+****************************************************************************************
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: p
+	Enter message: hello$
+What is up?
+$
+
+	======================================================
+	                   New   post   added                 
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: tweet$
+Another line$
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+***********************************************************************************************
+Test Case #8: Entering a message/tweet with a new line and then $ but other things included
+***********************************************************************************************
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: p
+	Enter message: Hello!$
+$
+
+	======================================================
+	                   New   post   added                 
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: 1st tweet$
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+
+*******************************************************************************************
+************************************DISPLAYING WALLPAGE************************************
+*******************************************************************************************
+
+****************************************************************************************
+Test Case #9: Having 3 or fewer messages
+****************************************************************************************
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: p
+	Enter message: 1st post!
+$
+
+	======================================================
+	                   New   post   added                 
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: p
+	Enter message: 2nd post!
+$
+
+	======================================================
+	                   New   post   added                 
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: p
+	Enter message: 3rd post!
+$
+
+	======================================================
+	                   New   post   added                 
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: w
+	======================================================
+	                   John's Wall Page              
+	======================================================
+3rd post!
+
+2nd post!
+
+1st post!
+
+	======================================================
+	               End of John's Wall Page              
+	======================================================
+
+****************************************************************************************
+Test Case #10: Have 4 messages - entering "yes"
+****************************************************************************************
+
+	======================================================
+	                   John's Wall Page              
+	======================================================
+4th post!
+
+3rd post!
+
+2nd post!
+
+		More messages? (yes/no): yes
+1st post!
+
+	======================================================
+	               End of John's Wall Page              
+	======================================================
+
+****************************************************************************************
+Test Case #12: User enters "no"
+****************************************************************************************
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: w
+	======================================================
+	                   John's Wall Page              
+	======================================================
+4th post!
+
+3rd post!
+
+2nd post!
+
+		More messages? (yes/no): no
+	======================================================
+	               End of John's Wall Page              
+	======================================================
+
+****************************************************************************************
+Test Case #13: User enters anything other than "yes" or "no"
+****************************************************************************************
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: w
+	======================================================
+	                   John's Wall Page              
+	======================================================
+4th post!
+
+3rd post!
+
+2nd post!
+
+		More messages? (yes/no): more
+		Please type either yes or no.
+		More messages? (yes/no):
+
+********************************************************************************************
+************************************DISPLAYING HOME PAGE************************************
+********************************************************************************************
+
+********************************************************************************************
+Test Case #14: Have 3 or fewer messages
+********************************************************************************************
+
+********************************************************************************************
+Test Case #15: Have 4 messages
+Test Case #16: User enters "yes" to see more messages
+********************************************************************************************
+	======================================================
+	                   John's Home Page              
+	======================================================
+John ~ 4th post!
+
+John ~ 3rd post!
+
+John ~ 2nd post!
+
+		More messages? (yes/no): yes
+John ~ 1st post!
+
+Michael ~ 1st tweet$
+	======================================================
+	               End of John's Home Page              
+	======================================================
+
+********************************************************************************************
+Test Case #17: User enters "no"
+********************************************************************************************
+	======================================================
+	                   John's Home Page              
+	======================================================
+John ~ 4th post!
+
+John ~ 3rd post!
+
+John ~ 2nd post!
+
+		More messages? (yes/no): no
+	======================================================
+	               End of John's Home Page              
+	======================================================
+
+********************************************************************************************
+Test Case #18: User enters anything other than "yes" or "no"
+********************************************************************************************
+	======================================================
+	                   John's Home Page              
+	======================================================
+John ~ 4th post!
+
+John ~ 3rd post!
+
+John ~ 2nd post!
+
+		More messages? (yes/no): nope
+		Please type either yes or no.
+		More messages? (yes/no): 
+
+****************************************************************************************
+*******************************QUITING AUBIEBOOK****************************************
+****************************************************************************************
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: q
+	===========================================================
+	|       Thank you for using the Aubiebook System          |
+	===========================================================
+
+****************************************************************************************
+*******************************OPERATING THE MENU***************************************
+****************************************************************************************
+
+****************************************************************************************
+Test Case #20: Entering invalid option choice
+Test Case #21: Entering capitol letter of valid option choice
+Test Case #22: Entering whole words
+****************************************************************************************
+
+	===========================================================
+	      Welcome to Distributed System Aubiebook, John!
+	===========================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: F
+
+Invald choice. Please try again.
+
+Enter option: P
+
+Invald choice. Please try again.
+
+Enter option: T
+
+Invald choice. Please try again.
+
+Enter option: W
+
+Invald choice. Please try again.
+
+Enter option: H
+
+Invald choice. Please try again.
+
+Enter option: Q
+
+Invald choice. Please try again.
+
+Enter option: friend
+
+Invald choice. Please try again.
+
+Enter option: post
+
+Invald choice. Please try again.
+
+Enter option: tweet
+
+Invald choice. Please try again.
+
+Enter option: wall
+
+Invald choice. Please try again.
+
+Enter option: home
+
+Invald choice. Please try again.
+
+Enter option: quit
+
+Invald choice. Please try again.
+
+Enter option: 
+
+**********************************************************************************
+*****************************Multipler User Test**********************************
+**********************************************************************************
+
+**********************************************************************************
+Log on a new user post a message and tweet on each. Display wall
+and home pages. Log off. Here are the outputs for 4 users in a row. All done on
+different machines.
+**********************************************************************************
+
+**********************************************************************************
+For the first user, add the second user as its friend. Post a message and a tweet
+on each user. Display wall and home pages. All done on different machines.
+**********************************************************************************
+
+**************
+First user
+**************
+
+Michael-Paces-MacBook-Pro:Temp Lab 2 michaelpace$ ./a
+	===========================================================
+	|               Distributed System AubieBook!             |
+	===========================================================
+
+Printing valid users..
+Enter name: One
+New user..
+One has been added!
+	===========================================================
+	      Welcome to Distributed System Aubiebook, One!
+	===========================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: p
+	Enter message: One's first post!
+$
+
+	======================================================
+	                   New   post   added                 
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: One's first tweet!
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: w
+	======================================================
+	                   One's Wall Page              
+	======================================================
+One's first tweet!
+
+One's first post!
+
+	======================================================
+	               End of One's Wall Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   One's Home Page              
+	======================================================
+One ~ One's first tweet!
+
+One ~ One's first post!
+
+	======================================================
+	               End of One's Home Page              
+	======================================================
+
+*************
+Second User
+*************
+
+Michael-Paces-MacBook-Pro:Temp Lab 2 michaelpace$ ./a
+	===========================================================
+	|               Distributed System AubieBook!             |
+	===========================================================
+
+Printing valid users..
+One
+Enter name: Two
+New user..
+Two has been added!
+	===========================================================
+	      Welcome to Distributed System Aubiebook, Two!
+	===========================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: p
+	Enter message: Two's first post!
+$
+
+	======================================================
+	                   New   post   added                 
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: Two's first tweet!
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: w
+	======================================================
+	                   Two's Wall Page              
+	======================================================
+Two's first tweet!
+
+Two's first post!
+
+	======================================================
+	               End of Two's Wall Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   Two's Home Page              
+	======================================================
+Two ~ Two's first tweet!
+
+Two ~ Two's first post!
+
+One ~ One's first tweet!
+
+	======================================================
+	               End of Two's Home Page              
+	======================================================
+
+*************
+Third User
+*************
+
+Michael-Paces-MacBook-Pro:Temp Lab 2 michaelpace$ ./a
+	===========================================================
+	|               Distributed System AubieBook!             |
+	===========================================================
+
+Printing valid users..
+One
+Two
+Enter name: Three
+New user..
+Three has been added!
+	===========================================================
+	      Welcome to Distributed System Aubiebook, Three!
+	===========================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: p
+	Enter message: Three's first post!
+$
+
+	======================================================
+	                   New   post   added                 
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: Three's first tweet!
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: w
+	======================================================
+	                   Three's Wall Page              
+	======================================================
+Three's first tweet!
+
+Three's first post!
+
+	======================================================
+	               End of Three's Wall Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   Three's Home Page              
+	======================================================
+Three ~ Three's first tweet!
+
+Three ~ Three's first post!
+
+Two ~ Two's first tweet!
+
+promptMoreMessages...
+		More messages? (yes/no): yes
+One ~ One's first tweet!
+
+	======================================================
+	               End of Three's Home Page              
+	======================================================
+
+*************
+Fourth User
+*************
+
+Michael-Paces-MacBook-Pro:Temp Lab 2 michaelpace$ ./a
+	===========================================================
+	|               Distributed System AubieBook!             |
+	===========================================================
+
+Printing valid users..
+One
+Two
+Three
+Enter name: Four
+New user..
+Four has been added!
+	===========================================================
+	      Welcome to Distributed System Aubiebook, Four!
+	===========================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: p
+	Enter message: Four's first post!
+$
+
+	======================================================
+	                   New   post   added                 
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: Four's first tweet!
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: w
+	======================================================
+	                   Four's Wall Page              
+	======================================================
+Four's first tweet!
+
+Four's first post!
+
+	======================================================
+	               End of Four's Wall Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   Four's Home Page              
+	======================================================
+Four ~ Four's first tweet!
+
+Four ~ Four's first post!
+
+Three ~ Three's first tweet!
+
+promptMoreMessages...
+		More messages? (yes/no): yes
+Two ~ Two's first tweet!
+
+One ~ One's first tweet!
+
+	======================================================
+	               End of Four's Home Page              
+	======================================================
+
+*********************************************************************
+Under the same run for each user, I'll make the first and fourth 
+user friends. I'll then display their home pages.
+*********************************************************************
+
+****************
+First user
+****************
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: f
+
+One's friends...
+	
+	
+Please enter user name: Two
+
+	======================================================
+	                   Added Two to Friends List           
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   One's Home Page              
+	======================================================
+Four ~ Four's first tweet!
+
+Three ~ Three's first tweet!
+
+Two ~ Two's first tweet!
+
+		More messages? (yes/no): yes
+Two ~ Two's first post!
+
+One ~ One's first tweet!
+
+One ~ One's first post!
+
+	======================================================
+	               End of One's Home Page              
+	======================================================
+
+***************
+Second User
+***************
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   Two's Home Page              
+	======================================================
+Four ~ Four's first tweet!
+
+Three ~ Three's first tweet!
+
+Two ~ Two's first tweet!
+
+		More messages? (yes/no): yes
+Two ~ Two's first post!
+
+One ~ One's first tweet!
+
+One ~ One's first post!
+
+	======================================================
+	               End of Two's Home Page              
+	======================================================
+
+****************************************************************************************
+Here I create four new user and post a tweet on each and display home page. After the 
+fourth user, I step to the third user and post another tweet and display home page and
+so on until I am back at the first user.
+****************************************************************************************
+
+************
+User One
+************
+
+Michael-Paces-MacBook-Pro:Temp Lab 2 michaelpace$ ./a
+	===========================================================
+	|               Distributed System AubieBook!             |
+	===========================================================
+
+Printing valid users..
+Enter name: One
+New user..
+One has been added!
+	===========================================================
+	      Welcome to Distributed System Aubiebook, One!
+	===========================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: One's first tweet
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: w
+	======================================================
+	                   One's Wall Page              
+	======================================================
+One's first tweet
+
+	======================================================
+	               End of One's Wall Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   One's Home Page              
+	======================================================
+One ~ One's first tweet
+
+	======================================================
+	               End of One's Home Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: One's second tweet
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   One's Home Page              
+	======================================================
+One ~ One's second tweet
+
+Two ~ Two's second tweet
+
+Three ~ Three's second tweet
+
+		More messages? (yes/no): yes
+Four ~ Four's first tweet
+
+Three ~ Three's first tweet
+
+Two ~ Two's first tweet
+
+One ~ One's first tweet
+
+	======================================================
+	               End of One's Home Page              
+	======================================================
+
+************
+User Two
+************
+
+Michael-Paces-MacBook-Pro:Temp Lab 2 michaelpace$ ./a
+	===========================================================
+	|               Distributed System AubieBook!             |
+	===========================================================
+
+Printing valid users..
+One
+Enter name: Two
+New user..
+Two has been added!
+	===========================================================
+	      Welcome to Distributed System Aubiebook, Two!
+	===========================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: Two's first tweet
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: w
+	======================================================
+	                   Two's Wall Page              
+	======================================================
+Two's first tweet
+
+	======================================================
+	               End of Two's Wall Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   Two's Home Page              
+	======================================================
+Two ~ Two's first tweet
+
+One ~ One's first tweet
+
+	======================================================
+	               End of Two's Home Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: Two's second tweet
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   Two's Home Page              
+	======================================================
+Two ~ Two's second tweet
+
+Three ~ Three's second tweet
+
+Four ~ Four's first tweet
+
+		More messages? (yes/no): yes
+Three ~ Three's first tweet
+
+Two ~ Two's first tweet
+
+One ~ One's first tweet
+
+	======================================================
+	               End of Two's Home Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: 
+
+************
+User Three
+************
+
+Michael-Paces-MacBook-Pro:Temp Lab 2 michaelpace$ ./a
+	===========================================================
+	|               Distributed System AubieBook!             |
+	===========================================================
+
+Printing valid users..
+One
+Two
+Enter name: Three
+New user..
+Three has been added!
+	===========================================================
+	      Welcome to Distributed System Aubiebook, Three!
+	===========================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: Three's first tweet
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: w
+	======================================================
+	                   Three's Wall Page              
+	======================================================
+Three's first tweet
+
+	======================================================
+	               End of Three's Wall Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   Three's Home Page              
+	======================================================
+Three ~ Three's first tweet
+
+Two ~ Two's first tweet
+
+One ~ One's first tweet
+
+	======================================================
+	               End of Three's Home Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: Three's second tweet
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   Three's Home Page              
+	======================================================
+Three ~ Three's second tweet
+
+Four ~ Four's first tweet
+
+Three ~ Three's first tweet
+
+		More messages? (yes/no): yes
+Two ~ Two's first tweet
+
+One ~ One's first tweet
+
+	======================================================
+	               End of Three's Home Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: 
+
+***********
+User Four
+***********
+
+Michael-Paces-MacBook-Pro:Temp Lab 2 michaelpace$ ./a
+	===========================================================
+	|               Distributed System AubieBook!             |
+	===========================================================
+
+Printing valid users..
+One
+Two
+Three
+Enter name: Four
+New user..
+Four has been added!
+	===========================================================
+	      Welcome to Distributed System Aubiebook, Four!
+	===========================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: t
+	Enter tweet: Four's first tweet
+$
+
+	======================================================
+	                   New tweet added                    
+	======================================================
+
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: w
+	======================================================
+	                   Four's Wall Page              
+	======================================================
+Four's first tweet
+
+	======================================================
+	               End of Four's Wall Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: h
+	======================================================
+	                   Four's Home Page              
+	======================================================
+Four ~ Four's first tweet
+
+Three ~ Three's first tweet
+
+Two ~ Two's first tweet
+
+		More messages? (yes/no): yes
+One ~ One's first tweet
+
+	======================================================
+	               End of Four's Home Page              
+	======================================================
+Add Friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+Enter option: 
+
+***********************************************************************
+End of tests
+***********************************************************************
+

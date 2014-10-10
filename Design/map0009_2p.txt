@@ -1,0 +1,303 @@
+Michael Pace
+COMP 2710
+
+Lab 2: Distributive System AubieBook
+
+ANALYSIS - Use cases
+
+Use Case #1 (Register/Login)
+1. Brief Description: This use allows first time to register into Aubiebook and allows current members to log in
+
+2. Actors
+- User
+
+3. Preconditions
+- AubieBook displays its 
+- AubieBook asks User to type their name
+
+4. Basic Flow of events
+- User opens AubieBook
+- Aubiebook asks for their name
+- User types name and enter
+- Aubiebook checks list of Users for name, Aubiebook shouldn't find this name
+- Aubiebook weclomes User
+- That User becomes the current User
+- Aubiebook displays menu and waits next command
+
+5. Alternate Flows
+
+5.1 if Aubiebook finds name User types ie., the User already exists
+- Aubiebook welcomes already existing User
+- The User becomes the current User
+
+6. Post-conditions
+- AubieBook welcomes current User
+- This User becomes current User
+- AubieBook displays menu and waits next command
+
+Use Case #2 (Add friend)
+1. Brief Description: This use allows current User to add an existing User to their friendlist
+
+2. Actors
+- current User
+- registered User
+
+3. Preconditions
+- current User must be registered and logged in
+- User must selected 'f'
+- The Username the current User wishes to add must already be registered
+
+4. Basic Flow of events
+- Aubiebook asks User to type the Username of the friend they wish to add
+- If Username is valid, adds this Username to list of friends of current User
+
+5. Alternate Flows
+
+5.1 The Username typed is not a valid User
+- AubieBook displays an error message
+
+6. Post-conditions
+- Aubiebook displays that Username was added to friend list
+- AubieBook redisplays menu 
+
+Use Case #3 (Post Message)
+1. Brief Description: This use allows current User to post a message
+
+2. Actors
+- current User
+
+3. Preconditions
+- current User must be registered and logged in
+- User must selected 'p'
+
+4. Basic Flow of events
+- AubieBook asks the current User to enter message
+- Current User types their message ending it with a single line containing $
+- Message is stored in User's specific message buffer
+- AubieBook redisplays menu
+
+5. Alternate Flows
+
+6. Post-conditions
+- Message is stored in Users specific message buffer 
+- AubieBook displays message was added
+- AubieBook redisplays menu
+
+Use Case #4 (Post Tweet)
+1. Brief Description: This use allows current User to "tweet" a message
+
+2. Actors
+- current User
+
+3. Preconditions
+- current User must be registered and logged in
+- User must selected 't'
+
+4. Basic Flow of events
+- AubieBook asks the current User to enter message
+- Current User types their message ending it with a single line containing $
+- Message is stored in text file named "Tweet"
+- AubieBook redisplays menu
+
+5. Alternate Flows
+
+6. Post-conditions
+- Message is stored in text file named "Tweet"
+- AubieBook displays tweet was added
+- AubieBook redisplays menu
+
+Use Case #5 (View Wall)
+1. Brief Description: This use allows User to display their wall page which will display the messages of the current User in reverse chronological order
+
+2. Actors
+- current User
+
+3. Preconditions
+- current User must be registered and logged in
+- User must selected 'w'
+
+4. Basic Flow of events
+- AubieBook displays title of Users wall page
+- Displays the latest 3 messages that the current User has posted in reverse chronological order (these do not contain the Users name)
+- Prompts User if they wish to see more messages
+- User types "yes," AubieBook displays remaining messages from current User
+
+5. Alternate Flows
+
+5.1 User types "no"
+- AubieBook stops displaying messages
+
+5.2 There are 3 or fewer messages left to display
+- AubieBook doesn't prompt to display more messages
+
+6. Post-conditions
+- AubieBook displays end of Users wall
+- AubieBook redisplays menu
+
+Use Case #6 (View Home Page)
+1. Brief Description: This use allows User to display their home page which will display the messages of the current User and his friends and all tweets in reverse chronological order
+
+2. Actors
+- current User
+- friends of current User
+
+3. Preconditions
+- current User must be registered and logged in
+- User must selected 'h'
+
+4. Basic Flow of events
+- AubieBook displays title of Users home page
+- Displays the latest 3 messages of the current User, his friends and tweets from all Users in reverse chronological order. When displaying a message, it displays the name of the User followed by a " ~ " and the message.
+- Prompts User if they wish to see more messages
+- User types "yes," Aubiebook displays remaining messages from the current User, current User's friends and all tweeted messages
+
+5. Alternate Flows
+
+5.1 User types "no"
+- Aubiebook stops displaying messages
+
+5.2 There are 3 or fewer messages left to display
+- Aubiebook doesn't prompt to display more messages
+
+6. Post-conditions
+- AubieBook displays end of Users wall
+- AubieBook redisplays menu
+
+Use Case #7 (Quit AubieBook)
+1. Brief Description: This use allows User to exit AubieBook
+
+2. Actors
+- current User
+
+3. Preconditions
+- current User must be registered and logged in
+- User must selected 'q'
+
+4. Basic Flow of events
+- Exit Aubiebook
+
+5. Alternate Flows
+
+6. Post-conditions
+- End program
+- AubieBook tells the User thank you for using AubieBook
+
+DESIGN
+
+For this program, I use the same classes only each have more methods/use.
+
+System
+
+Menu class will display the main menu with the 6 options, handle Users input and and call on class
+Display to handle text based outputs.
+
+- startMenu: calls displayWelcome to begin AubieBook and display welcome to User. Prompts User to enter their name. Calls isUserValid with this name. If this User is valid, this becomes current User. Otherwise, createUser is called using the name entered as the string parameter. This newly created Userbecomes the current User. updatedWelcome is then called to welcome new or returning User with a specified welcoming message. Menu is displayed. User is prompted to enter their choice. Choice is handle by handleChoice.
+- createUser: Creates a new User object with a string. String is set as Users name. This new User is then set to the current User and added to the vector of valid Users.- isValidChoice: Takes in char choice. choice is compared to each value in vector validChoices. If choice matches any of char in validChoices, isValidchoice returns true. False otherwise.
+- handleChoice: This method takes validated menu choice from User
+- promptAddFriend: If 'f' is entered into handleChoice, promptAddFriend will askUser to enter the name of the friend they wish to add. The entered name will be checkedfor registration with isUserValid. If this return is true, it will be added to the current User's vector, friends. Otherwise, an error message will be displayed.
+- promptPostMessage: If 'p' is entered into handleChoice, the User will be prompted to enter a message. The User will type as many lines as desired until a line with only a $ is typed. This message will then be written to the Users text file, ex: Bill's file will be "Bill.txt". A timestamp enclosed by brackets will precede each message.
+- promptTweet: If 't' is entered into handleChoice, the User will be prompted to enter a message. The User will type as many lines as desired until a line with only a $ is typed. This message will then be written to the file "Tweets". A timestamp enclosed by brackets as well as the Users name enclosed by brackets will precede each tweet.
+
+User class is an implementation of an AubieBook account. This object will contain information of the current user and it's friend list.
+
+- haveSameName: Compares the the name value of current User object with given User object. Returns true if names are the same. False otherwise.
+- setName: Sets the name member of current User object.
+- addFriend: Adds given User object to current User objects vector of friends.
+- printFriends: Prints every friend of current User object.
+- isFriendsWith: Checks if current User object is friends with given User object.
+- toString: Returns string name of User object.
+
+Display class will handle most text based displays: welcomes, the menu, errors, message/tweet posts. This class also handles interating through all messages/tweets and formatting wall and home page displays.
+
+- displayWelcome: This will display a generic text based welcome to all unregistered Users
+- updateWelcome: This will display a welcome specific to the current User.
+- displayExit: This will display "Thank you for using AubieBook!"
+- displayMenu: This will display the text based menu, giving the User the option to add friends, post messages, post tweets, display wall pages, display home pages and to quit Aubiebook.
+- displayPage: This will display the title to either the current Users wall page or home page.
+- promptMoreMessages: promptMoreMessages is used in displayWallPage and displayHomePage. This method will prompt users if after three messages/tweets have been displayed and there are more than three left. It will ask users if they wish to see more messages and to type "yes" or "no". Will continually prompt user until either of these responses is typed.
+- findUsersMsgs: This method will iterate through the current User's message buffer as well as the "Tweet" message buffer and increment a counter each time a message is encountered. This counter is returned. This number is used to determine whether more messages should be displayed in displayWallPage.
+- findValidMessages: This method will iterate through the current User's message buffer, all of his friends message buffers as well as the "Tweet" message buffer and increment a counter each time a message is encountered. This counter is returned. This number is used to determine whether more messages should be displayed in displayHomePage.
+- displayWallPage: This method handles the display of the current User's wall page. This method first calls on findUserMsgs to determine the number of messages it should find as stated above. After iterating through the current User's text file and properly formatting each message without the User's name, $ or brackets, this method will display the first three messages in reverse chronological order. It will then check the number of valid messages left. If there are more than three it will call promptMoreMessages. If the user types "yes" it will display the rest of the messages. If "no" is entered it will stop display messages. If there are 3 or less messages left it will do nothing.
+- displayHomePage: This method handles the display of the current User's home page. This method first calls on findValidMsgs to determine the number of messages it should find as stated above. After iterating through the current User's text file, its friends text files and "Tweet.txt", and properly formatting each message with the users name followed by " ~ " and not containing $ or brackets, this method will display the first three messages in reverse chronological order. It will then check the number of valid messages left. If there are more than three it will call promptMoreMessages. If the user types "yes" it will display the rest of the messages. If "no" is entered it will stop display messages. If there are 3 or less messages left it will do nothing.
+
+
+TESTING
+
+Logging in:
+Test Case #1: Entering registered username
+	- User input: Michael
+	- Expected output: Welcome to Distributed AubieBook System, Michael!
+Test Case #2: Entering unregistered username
+	- User input: Stephen
+	- Expected output: Welcome to Distributed AubieBook System, Stephen!
+
+Enter 'f' at main menu:
+Test Case #3: Entering an unregistered username
+	- User input: Michelle
+	- Expected output: Invalid User, please try again. Will return to main menu.
+Test Case #4: Entering a registered username
+	- User input: Thomas
+	- Expected output: Input is added to current user's friend list. Added "input" to Friend's List. Will return to main menu.
+
+Enter 'p' or 't' at main menu:
+Test Case #5: Entering a message/tweet without including a new line with a '$'
+	- User input: Is anybody out there?
+	- Expected output: Program will continue to take in the users message until a single line with a '$' is typed.
+Test Case #6: Entering a message/tweet including enter and $ at the end
+	- User input: What's up guys?
+		$
+	- Expected output: Saves the message/tweet to the User's message buffer or Tweet buffer, redisplays menu.
+Test Case #7: Entering a message/tweet with $ but not after a new line
+	- User input: Hey!$
+	- Expected output: Program will continue to take in the users message until a single line with a '$' is typed.
+Test Case #8: Entering a message/tweet with a new line and then $ but other things included
+	- User input: What's up guys?
+		$$
+	- Expected output: Program will continue to take in the users message until a single line with a '$' is typed.
+
+Entering 'w' at main menu:
+Test Case #9: Have 3 or fewer messages
+	- User input: w
+	- Expected output: all messages displayed are from the current user's buffer and do not contain the current users name, brackets, or $. These messages are all displayed in reverse chronological order. Immediately following, the menu should redisplay since there were 3 or fewer messages stored in the buffer.
+Test Case #10: Have 4 messages
+	- User input: w
+	- Expected output: The latest 3 messages are shown in reverse chronological order not containing the users name. Then asks the user if they want to see more messages.
+Test Case #11: User enters "yes" to see more messages
+	- User input: yes
+	- Expected output: Displays remaining messages in reverse chronological order not containing the users name.
+Test Case #12: User enters "no"
+	- User input: no
+	- Expected output: Stops displaying messages and returns to main menu
+Test Case #13: User enters anything other than "yes" or "no"
+	- User input: please
+	- Expected output: "Not a valid input, please try again." Redisplays menu.
+
+Entering 'h' at main menu:
+Test Case #14: Have 3 or fewer messages
+	- User input: h
+	- Expected output: all messages displayed are from the current user, the current users friends and all tweets. Each message displayed is preceded by the username followed by " ~ ". All messages/tweets are displayed in reverse chronological order. These do not contain brackets, or $. Immediately following, the menu should redisplay since there were 3 or fewer messages stored in the buffer.
+Test Case #15: Have 4 messages
+	- User input: h
+	- Expected output: The latest 3 messages are shown in reverse chronological order with each message preceded by the name of the user it is from and " ~ ". Then asks user if they wish to see more messages.
+Test Case #16: User enters "yes" to see more messages
+	- User input: yes
+	- Expected output: Displays all remaining messages/tweets in reverse chronological order with the username first followed by " ~ " and the message.
+Test Case #17: User enters "no"
+	- User input: no
+	- Expected output: stops displaying messages and returns to main menu
+Test Case #18: User enters anything other than "yes" or "no"
+	- User input: please
+	- Expected output: "Not a valid input, please try again." Redisplays menu.
+
+Entering 'q' at main menu:
+Test Case #19:
+	- User input: q
+	- Expected output: Thank you for using the AubieBook System
+
+Entering something other than 'f', 'p', 't', 'w', 'h', 'q'
+Test Case #20: Entering invalid option choice
+	- User input: e
+	- Expected output: "Not a valid input. Please try again." Redisplays menu.
+Test Case #21: Entering capitol letter of valid option choice
+	- User input: F
+	- Expected output: "Not a valid input. Please try again." Redisplays menu.
